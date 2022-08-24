@@ -1,0 +1,23 @@
+1.	전기차충전
+
+한국전력공사의오픈api를활용하여충전소위치검색,실시간충전기모니터링,다크모드지원,충전기종류확인,충전소검색기능,충전소오류제보등의정보를제공합니다.
+한국전력공사_전기차충전소운영정보:전기차충전소명및주소정보
+
+https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=3068728
+
+한국환경공단_전기자동차충전소정보:전국의전기자동차충전소위치및상태정보등제공을통해전기자동차이용자의편의제공
+
+https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15076352
+
+ 
+Solution:
+Analysis
+
+API data of electric charging station including location, central, office, name of station, station ID, charger capacity, 
+charger name, charger type and charge method.
+
+real-time status request including ServiceKey, pageNo, numOfRows, period, zcode.
+                 response including resultCode, resultMsg, pageNo, numOfRows, totalCount, busild, statld, chgerld, stat and statUpdDt
+                
+using activity display to display and input the request funtions
+using stationStatus to connect to the api server to get response data
